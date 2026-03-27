@@ -28,7 +28,7 @@ Use this skill when the user wants to design, refine, review, or critique the UI
 ## Installation
 
 ```bash
-npx skills add agent-skills
+npx skills add https://github.com/yankewei/agent-skills
 ```
 
 ## Usage
