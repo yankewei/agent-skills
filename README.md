@@ -25,6 +25,28 @@ Use this skill when the user wants to design, refine, review, or critique the UI
 - Component design (toolbars, sidebars, forms, lists)
 - UI critique checklists
 
+### terminal-rendering
+
+Use this skill when building or improving embedded terminal rendering: VT cell grid, metrics, fonts, sprites, box drawing, and paint caches. Also use it when terminal output looks wrong, soft, or misaligned compared to Ghostty / kero / herdr.
+
+**Use when:**
+
+- Building a terminal pane, PTY viewer, or agent TUI host
+- Terminal output looks garbled, soft, or misaligned versus Ghostty
+- Fixing broken box drawing, Powerline glyphs, or Nerd Font icons
+- Working with libghostty-vt or Ghostty-style paint
+
+**Covers:**
+
+- VT grid correctness (cursor, modes, scrollback, alt screen)
+- Cell metrics and PTY resize including pixel cell size
+- Paint pipeline: background spans, sprites, then glyph runs
+- Drawing box / Powerline / braille as geometry instead of font glyphs
+- Missing-glyph fallback, contrast handling, and dirty-row caches
+- Session topology: in-process paint vs daemon + client mirroring
+
+**Files:** `SKILL.md` for the main workflow, `paint.md` for sprite ranges and contrast rules.
+
 ## Installation
 
 ```bash
@@ -49,6 +71,10 @@ Help me design a new preferences window for my macOS app
 Make this interface feel more native to macOS
 ```
 
+```
+My terminal panel clips the bottom row and skips box-drawing glyphs — fix the rendering
+```
+
 ## Skill Structure
 
 Each skill contains:
@@ -56,6 +82,7 @@ Each skill contains:
 - `SKILL.md` - Instructions for the agent
 - `scripts/` - Helper scripts for automation (optional)
 - `references/` - Supporting documentation (optional)
+- Additional `.md` files referenced from `SKILL.md` (optional, e.g. `terminal-rendering/paint.md`)
 
 ## Adding New Skills
 
