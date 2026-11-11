@@ -66,6 +66,8 @@ Use this skill when designing or implementing restrained semi-skeuomorphic UI fo
 - Theme, scale, and compositing cautions
 - Performance limits and an acceptance checklist
 
+**Files:** `SKILL.md` for the workflow, `references/` for tokens, components, theme, performance, and acceptance, `examples/preview-spec.md` for a spec with no code.
+
 Guidance only. It does not add application UI, and it does not replace native GPUI with HTML, CSS, or a WebView.
 
 ## Installation
