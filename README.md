@@ -47,6 +47,29 @@ Use this skill when building or improving embedded terminal rendering: VT cell g
 
 **Files:** `SKILL.md` for the main workflow, `paint.md` for sprite ranges and contrast rules.
 
+### gpui-semi-skeuomorphic-ui
+
+Use this skill when designing or implementing restrained semi-skeuomorphic UI for a native GPUI desktop app: glossy buttons, recessed segmented controls, pointer-following highlight cards, layered panels, light and dark themes, and accessibility and performance acceptance.
+
+**Use when:**
+
+- Designing or building native GPUI controls with restrained depth
+- Adding a glossy button, a recessed segmented control, a pointer-following card highlight, or a layered panel
+- Tuning light and dark themes without treating dark as an inverted light theme
+- Checking accessibility, motion, clipping, and paint cost for that treatment
+
+**Covers:**
+
+- Scope, and a capability check against the GPUI version in the target project
+- Shared color, elevation, radius, spacing, and motion tokens
+- The four component treatments and their interaction states
+- Theme, scale, and compositing cautions
+- Performance limits and an acceptance checklist
+
+**Files:** `SKILL.md` for the workflow, `references/` for tokens, components, theme, performance, and acceptance, `examples/preview-spec.md` for a spec with no code.
+
+Guidance only. It does not add application UI, and it does not replace native GPUI with HTML, CSS, or a WebView.
+
 ## Installation
 
 ```bash
@@ -73,6 +96,10 @@ Make this interface feel more native to macOS
 
 ```
 My terminal panel clips the bottom row and skips box-drawing glyphs — fix the rendering
+```
+
+```
+Design a restrained semi-skeuomorphic button and segmented control for this native GPUI app
 ```
 
 ## Skill Structure
